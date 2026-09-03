@@ -1,0 +1,330 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[a4paper,left=2.0cm,right=2.0cm,top=1.55cm,bottom=1.55cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usepackage{setspace}
+
+% -------------------------------------------------
+% COLOURS
+% -------------------------------------------------
+\definecolor{TitleBlue}{RGB}{61,103,154}
+
+% -------------------------------------------------
+% GENERAL SETTINGS
+% -------------------------------------------------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\renewcommand{\arraystretch}{1.0}
+
+% The supplied document uses a clean sans-serif heading style
+% and italic serif-style explanatory text.
+\newcommand{\blueheading}[1]{%
+    {\sffamily\color{TitleBlue}\fontsize{15}{18}\selectfont #1}%
+}
+
+\newcommand{\bluebigheading}[1]{%
+    {\sffamily\bfseries\color{TitleBlue}\fontsize{16}{19}\selectfont #1}%
+}
+
+\newcommand{\instruction}[1]{%
+    {\itshape\fontsize{10.5}{12.5}\selectfont #1}%
+}
+
+\newcommand{\answerbox}[2][3.0cm]{%
+  \vspace{2pt}%
+  \noindent
+  \fbox{%
+    \begin{minipage}[t][#1][t]{\dimexpr \textwidth -2\fboxsep -2\fboxrule \relax}
+      \vspace{1mm}
+      \rmfamily #2
+    \end{minipage}%
+  }%
+}\textit{}
+
+% -------------------------------------------------
+% HEADER / FOOTER
+% -------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\fancyhead[L]{%
+    \sffamily\bfseries\itshape\fontsize{10.5}{12}\selectfont
+    CAMPUSXPLORE - DSCPP-III-2026-T039
+}
+\fancyhead[R]{%
+    \sffamily\bfseries\fontsize{10.5}{12}\selectfont
+    PROJECT PROPOSAL
+}
+\fancyfoot[R]{%
+    \itshape\fontsize{10}{12}\selectfont
+    Page \thepage
+}
+\setlength{\headheight}{14pt}
+\setlength{\headsep}{23pt}
+\setlength{\footskip}{24pt}
+
+% -------------------------------------------------
+% PAGE 1
+% -------------------------------------------------
+\begin{document}
+
+\vspace*{4mm}
+
+\bluebigheading{PROJECT AND TEAM INFORMATION}
+
+\vspace{13mm}
+
+\blueheading{Project Title}
+
+\vspace{1mm}
+
+\instruction{(Try to choose a catchy title. Max 20 words).}
+
+\answerbox[1.0cm]{CampusXplore: A QR-Based Campus Navigation and Building Information System}
+
+\vspace{13mm}
+
+\blueheading{Student / Team Information}
+
+\vspace{2mm}
+
+% Team information table
+% Compact 4-member layout so all members remain on Page 1.
+\noindent
+\begin{tabularx}{\textwidth}{|>{\RaggedRight\arraybackslash}p{0.69\textwidth}|>{\RaggedRight\arraybackslash}X|}
+\hline
+\begin{minipage}[t]{\linewidth}
+\vspace{1.5mm}
+\textit{Team Name:}\\[-1mm]{Runtime Renegades}
+
+\vspace{1.5mm}
+\end{minipage}
+&
+\begin{minipage}[t]{\linewidth}
+\vspace{1.5mm}
+\textit{}
+\vspace{1.5mm}
+\end{minipage}
+\\
+\hline
+\begin{minipage}[t][3.25cm][t]{\linewidth}
+\vspace{1.5mm}
+\textbf{Team member 1 (Team Lead)}\\[-1mm]
+\textit{(Last Name, name: student ID: email, picture):}
+\vspace{2.0cm}
+\end{minipage}
+&
+\begin{minipage}[t][3.25cm][t]{\linewidth}
+\vspace{1.5mm}
+\textit{Aggarwal, Garvit --2510011570}\\
+\textit{2510011570@geu.ac.in}
+
+\vspace{2mm}
+\includegraphics[width=3.0cm,height=1.5cm,keepaspectratio]{member1.png}
+\end{minipage}
+\\
+\hline
+\begin{minipage}[t][3.25cm][t]{\linewidth}
+\vspace{1.5mm}
+\textbf{Team member 2}\\[-1mm]
+\textit{(Last Name, name: student ID: email, picture):}
+\vspace{2.0cm}
+\end{minipage}
+&
+\begin{minipage}[t][3.25cm][t]{\linewidth}
+\vspace{1.5mm}
+\textit{Maletha, Raj -- 2510011537}\\
+\textit{2510011537@geu.ac.in}
+
+\vspace{2mm}
+\includegraphics[width=3.0cm,height=1.5cm,keepaspectratio]{member2.png}
+\end{minipage}
+\\
+\hline
+\begin{minipage}[t][3.25cm][t]{\linewidth}
+\vspace{1.5mm}
+\textbf{Team member 3}\\[-1mm]
+\textit{(Last Name, name: student ID: email, picture):}
+\vspace{2.0cm}
+\end{minipage}
+&
+\begin{minipage}[t][3.25cm][t]{\linewidth}
+\vspace{1.5mm}
+\textit{Bisht, Ranveer Singh --2510014382}\\
+\textit{2510014382@geu.ac.in}
+
+\vspace{2mm}
+\includegraphics[width=3.0cm,height=1.5cm,keepaspectratio]{member3.png}
+\end{minipage}
+\\
+\hline
+\begin{minipage}[t][3.25cm][t]{\linewidth}
+\vspace{1.5mm}
+\textbf{Team member 4}\\[-1mm]
+\textit{(Last Name, name: student ID: email, picture):}
+\vspace{2.0cm}
+\end{minipage}
+&
+\begin{minipage}[t][3.25cm][t]{\linewidth}
+\vspace{1.5mm}
+Chamoli, Arnav -- 2510380296\\
+\textit{2510380296@geu.ac.in}
+
+\vspace{2mm}
+ \includegraphics[width=3.0cm,height=1.5cm,keepaspectratio]{member4.png}
+\end{minipage}
+\\
+\hline
+\end{tabularx}
+
+\newpage
+
+% -------------------------------------------------
+% PAGE 2
+% -------------------------------------------------
+
+\bluebigheading{PROPOSAL DESCRIPTION (10 pts)}
+
+\vspace{12mm}
+
+\blueheading{Motivation (1 pt)}
+
+\vspace{1mm}
+
+\instruction{(Describe the problem you want to solve and why it is important. Max 300 words).}
+
+\answerbox[4.5cm]{ Navigating a big university campus to find classrooms, labs, offices and other facilities can be a challenge, especially for new students and visitors. GPS accuracy is generally not sufficient for position determination inside buildings, which makes indoor navigation more difficult than outdoor navigation. In our project,a practical campus navigation system is proposed which is able to help users to identify their initial position and to find an efficient path to a selected destination .The system will model campus spaces as agraph and apply Dijkstra’s algorithm to compute routes .It will also take account of multi- floor movement , accessibility, temporarily blocked routes and emergency destinations.}
+
+\vspace{12mm}
+
+\blueheading{State of the Art / Current solution (1 pt)}
+
+\vspace{1mm}
+
+\instruction{(Describe how the problem is solved today (if it is). Max 200 words).}
+
+\answerbox[5.0cm]{The reports reviewed adopt different methods for indoor campus navigation . Interactive maps and QR codes are used to identify the user’s starting point. The Flooyd-Warshall algorithm is used to calculate the route. Another method
+generates indoor maps from CAD /DXF files and integrates them with BLE transmitters . The method adopts a hierarchical building structure and graph- based navigation. These studies show that the indoor navigation can combine digital maps, location identfication and graph algorithms . Positioning methods, however, may require additional infraastructure or user interaction. In our project, we will go a simpler route where the user can manualy enter the starting location or use a QR code at a supported campus point .Won’t use BLE transmitters.}
+
+\vspace{12mm}
+
+\blueheading{Project Goals and Milestones (2 pts)}
+
+\vspace{1mm}
+
+\instruction{(Describe the project general goals. Include initial milestones as well any other milestones. Max 300 words).}
+
+\answerbox[9.15cm]{%
+\textbf{Key Features:}
+\begin{itemize}
+    \item \textbf{Campus Navigation System:}  Create a digital map of the campus allowing users to select or scan their present position, choose desired destinations, and find the shortest route using Dijkstra's algorithm and a prority queue.
+    \item \textbf{Smart Accessible Routing:} Multi-floor way finding including stairs , elevators , accessibility preferences, temporarily blocked paths, and emergency exits with automatic re-routing .
+    \item \textbf{Intelligent Route Selection:}
+Uses graph-based navigation and Dijkstra's algorithm to recommend best routes according to user parameters.
+\end{itemize}
+
+\vspace{1mm}
+\textbf{Developmental Milestones:}
+\begin{itemize}
+    \item Build requirements and graph model.
+    \item Implements location selection, search functionality,  and Dijkstra's algorithm.
+    \item Develop advanced routing feature, user interface, comprehensive testing, and final demo.
+\end{itemize}
+}
+
+\vspace{12mm}
+
+\blueheading{Project Approach (3 pts)}
+
+\vspace{1mm}
+
+\instruction{(Describe how you plan to articulate and design a solution. Including platforms and technologies that you will use. Max}
+
+\instruction{300 words).}
+
+\answerbox[10.5cm]{First, the program will locate the user on campus. The starting point can be entered in three ways: by typing in the location, selecting from the drop-down list or scanning the QR code. The last two variants were created to avoid the high- maintenance and imprecise location tracking process. After the start point has been identified, the app will search for  the destinations. Any particular place on campus can be used: a class, a lab, the office of the professor or the administration.The layout of the campus is stored in the graph structure, represented by the adjacency list.The vertices contain the information about the location, such as the room number whether it is an intersection point or a specific object, like a staircase, elevator or building entrance.The edges show the distance or time needed to travel from one point to another.The algorithm then calculates the path by applying the Dijkstra algorithm with a min‑heap.The array of predecessors holds the route and outputs it once the destination is found. Besides the structures the application will include the dynamic elements. For example the edges may be closed if a certain area is under construction if the area is not accessible for people with disabilities or if the area is unsuitable, for reasons. In these situations the algorithm will ignore the edges and find a new shortest path. Another dynamic feature is a staircase or an elevator: these structures can be included in the graph’s vertex or edge to help persons in wheelchairs or those who prefer not to take the stairs. The code will be written in C++ due to its natural use in such projects, where DSA (data structures and algorithms) plays a significant role. The user interface will also be relatively simple but informative enough to showcase the current location and the calculated shortest path on the 2D or 2.5D maps..}
+
+\newpage
+
+% -------------------------------------------------
+% PAGE 3
+% -------------------------------------------------
+
+\blueheading{System Architecture (High Level Diagram)(2 pts)}
+
+\vspace{1mm}
+
+\instruction{(Provide an overview of the system, identifying its main components and interfaces in the form of a diagram using a tool}
+
+\instruction{of your choice).}
+
+\answerbox[10.0cm]{
+    \centering
+    \includegraphics[width=0.85\textwidth, height=7.5cm, keepaspectratio]{architecture.png.jpg}
+}
+
+\vspace{12mm}
+
+\blueheading{Project Outcome / Deliverables (1 pts)}
+
+\vspace{1mm}
+
+\instruction{(Describe what are the outcomes / deliverables of the project. Max 200 words).}
+
+\answerbox[5.0cm]{The final output will be a fully functioning campus navigation prototype that uses Oops in C++/ DSA. The user of the prototype will be able to assign the starting point manually in addition to using supported QR code and also select the endpoint
+The complete system will involve the use of graph-based representation of the campus, search for the given destination, implementation of Dijkstra’s algorithm to find the shortest path , priority queue and route reconstruction. The working prototype will also demonstrate its ability to navigate through several building floors using stairs and elevators, provide route options considering particular kind of accessibility, ignore partially obstructed routes, and provide instructions for emergency exit .The report will cover the main parts of the graph architecture, algorithms, methods and results.}
+
+\vspace{12mm}
+
+\blueheading{Assumptions}
+
+\vspace{6mm}
+
+\instruction{( Describe the assumptions ( if any ) you are making to solve the problem. Max 100 words )}
+
+\answerbox[2.65cm]{It is assumed that the digital campus map is reliable and up-to-date in acordance with the changes in the design of a building. People can find their location by clicking on or inputting a particular one, while QR codes are located in certain neccessary places where needed .At the same time, there is no permanent automatic indoor positioning through BLE. Routes are based on the available graph data and condition of the charted roads.}
+
+\vspace{12mm}
+
+\blueheading{References}
+
+\vspace{1mm}
+
+\instruction{(Provide a list of resources or references you utilised for the completion of this deliverable. You may provide links).}
+
+\answerbox[11.5cm]{
+
+[1] L. E. Gryzun, O. V. Shcherbakov, and B. O. Bida, “Development of the information system for navigation in modern university campus,” CTE Workshop Proceedings, vol. 10, pp. 380–398, 2023, doi: 10.55056/cte.566.
+
+\vspace{1mm}
+[2] P. Świtalski and A. Salamończyk, “Universal structural map for indoor navigation in university campus,” Studia Informatica. Systems and Information Technology, no. 2 (29), 2023, doi: 10.34739/si.2023.29.05.
+
+\vspace{1mm}
+[3] O. A. Gbadamosi, A. O. Ilori, M. A. Oduwale, and O. O. Abiona, “Development of a smart GIS-based campus navigation and shortest path routing system for OAUSTECH, Ondo State, Nigeria,” Review of Information Engineering and Applications, vol. 12, no. 1, pp. 48–58, 2025, doi: 10.18488/79.v12i1.4656.
+
+
+[4] A. Basiri, E. S. Lohan, T. Moore, A. Winstanley, P. Peltola, C. Hill, P. Amirian, and P. Figueiredo e Silva, “Indoor location based services challenges, requirements and usability of current solutions,” Computer Science Review, vol. 24, pp. 1–12, 2017, doi: 10.1016/j.cosrev.2017.03.002. 
+
+\vspace{1mm}
+[5] A. Idrees, Z. Iqbal, and M. Ishfaq, “An efficient indoor navigation technique to find optimal route for blinds using QR codes,” in Proc. 2015 IEEE 10th Conf. Industrial Electronics and Applications (ICIEA), 2015, pp. 690–695, doi: 10.1109/ICIEA.2015.7334197. 
+
+\vspace{1mm}
+[6] R. W. Floyd, “Algorithm 97: Shortest Path,” Communications of the ACM, vol. 5, no. 6, p. 345, 1962, doi: 10.1145/367766.368168. 
+
+\vspace{1mm}
+[7] J. Kunhoth, A. Karkar, S. Al-Maadeed, and A. Al-Ali, “Indoor positioning and wayfinding systems: A survey,” Human-centric Computing and Information Sciences, vol. 10, no. 1, p. 18, 2020, doi: 10.1186/s13673-020-00222-0. 
+}
+
+\end{document}
+
